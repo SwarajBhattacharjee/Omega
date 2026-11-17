@@ -1,0 +1,8 @@
+# Fortinet FortiGate 200F Perimeter Firewall Traffic Log (CEF/Syslog)
+# Hostname: FG200F-KOL-7881 | Serial: FG200F-KOL-7881
+
+date=2026-11-17 time=02:40:01 devname="FG200F-KOL-7881" type="traffic" subtype="forward" level="notice" srcip=192.168.10.45 srcport=51120 dstip=8.8.8.8 dstport=53 proto=17 action="accept" policyid=1 service="DNS" trandisp="snat"
+date=2026-11-17 time=02:43:06 devname="FG200F-KOL-7881" type="traffic" subtype="forward" level="warning" srcip=192.168.10.45 srcport=51240 dstip=185.220.101.45 dstport=443 proto=6 action="accept" policyid=12 service="HTTPS" msg="Outbound connection to Tor Exit Node / Untrusted IP"
+date=2026-11-17 time=02:55:02 devname="FG200F-KOL-7881" type="traffic" subtype="forward" level="alert" srcip=192.168.10.100 srcport=49211 dstip=185.220.101.45 dstport=443 proto=6 action="accept" policyid=12 service="HTTPS" msg="High risk outbound session initiated from Primary Server"
+date=2026-11-17 time=03:10:44 devname="FG200F-KOL-7881" type="utm" subtype="ips" level="critical" srcip=192.168.10.100 srcport=49280 dstip=185.220.101.45 dstport=443 attack="Ransomware.OmegaLocker.C2.Beacon" action="dropped" msg="Signature match: Ransomware C2 Communication"
+date=2026-11-17 time=03:30:00 devname="FG200F-KOL-7881" type="traffic" subtype="local" level="notice" srcip=192.168.1.10 srcport=22 dstip=192.168.10.1 dstport=22 action="accept" msg="Admin Swaraj Bhattacharjee initiated forensic quarantine on VLAN 10"

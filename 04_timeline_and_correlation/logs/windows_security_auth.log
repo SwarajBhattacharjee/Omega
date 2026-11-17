@@ -1,0 +1,14 @@
+# Microsoft Windows Security Event Log (Simulated Raw Export)
+# Host: WS-NURSE-04 (192.168.10.45) & OMEGA-SRV-01 (192.168.10.100)
+# TimeZone: Asia/Kolkata (IST, UTC+5:30)
+
+2026-11-17 02:35:10 IST | EventID: 4624 | Source: Microsoft-Windows-Security-Auditing | Computer: WS-NURSE-04 | User: nurse_on_duty | LogonType: 2 (Interactive) | Status: 0x0 | Message: An account was successfully logged on.
+2026-11-17 02:42:15 IST | EventID: 4688 | Source: Microsoft-Windows-Security-Auditing | Computer: WS-NURSE-04 | User: nurse_on_duty | Process: C:\Windows\explorer.exe | CommandLine: explorer.exe "E:\" | Message: A new process has been created.
+2026-11-17 02:43:02 IST | EventID: 4688 | Source: Microsoft-Windows-Security-Auditing | Computer: WS-NURSE-04 | User: nurse_on_duty | Process: C:\Windows\System32\cmd.exe | CommandLine: cmd.exe /c "E:\PATIENT_TRANSFER_REPORT.docx.lnk" | Message: Malicious shortcut execution detected.
+2026-11-17 02:43:05 IST | EventID: 4688 | Source: Microsoft-Windows-Security-Auditing | Computer: WS-NURSE-04 | User: nurse_on_duty | Process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe | CommandLine: powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -Enc aQB3AHIAIABoAHQAdABw... | Message: Encoded PowerShell dropper executed.
+2026-11-17 02:45:18 IST | EventID: 4672 | Source: Microsoft-Windows-Security-Auditing | Computer: WS-NURSE-04 | User: SYSTEM | Message: Special privileges assigned to new logon (Privilege Escalation via CVE-2024-30088).
+2026-11-17 02:50:30 IST | EventID: 4624 | Source: Microsoft-Windows-Security-Auditing | Computer: OMEGA-SRV-01 | User: Administrator | LogonType: 3 (Network SMB) | SourceIP: 192.168.10.45 | WorkstationName: WS-NURSE-04 | Message: Network logon using harvested administrative token via PsExec.
+2026-11-17 02:51:00 IST | EventID: 7045 | Source: Service Control Manager | Computer: OMEGA-SRV-01 | ServiceName: PSEXESVC | ServiceFileName: %SystemRoot%\PSEXESVC.exe | ServiceType: user mode service | Message: A service was installed in the system.
+2026-11-17 02:53:14 IST | EventID: 7045 | Source: Service Control Manager | Computer: OMEGA-SRV-01 | ServiceName: OmegaSvc | ServiceFileName: C:\ProgramData\omega_payload.exe | ServiceType: auto start service | Message: Rogue ransomware persistence service installed.
+2026-11-17 03:00:22 IST | EventID: 4688 | Source: Microsoft-Windows-Security-Auditing | Computer: OMEGA-SRV-01 | User: SYSTEM | Process: C:\Windows\System32\vssadmin.exe | CommandLine: vssadmin.exe delete shadows /all /quiet | Message: Shadow copies deleted.
+2026-11-17 03:01:05 IST | EventID: 4688 | Source: Microsoft-Windows-Security-Auditing | Computer: OMEGA-SRV-01 | User: SYSTEM | Process: C:\Windows\System32\bcdedit.exe | CommandLine: bcdedit.exe /set {default} recoveryenabled no | Message: Recovery options disabled.

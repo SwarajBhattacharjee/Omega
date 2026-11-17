@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="100%" height="100%" style="background-color: #0d1117; font-family: 'Segoe UI', Arial, sans-serif;">
+  <defs>
+    <linearGradient id="serverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="alertGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7f1d1d" />
+      <stop offset="100%" stop-color="#991b1b" />
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#172554" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="20" y="20" width="960" height="60" rx="8" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="40" y="55" fill="#58a6ff" font-size="20" font-weight="bold">CASE OMEGA: FORENSIC SCENE SKETCH &amp; NETWORK TOPOLOGY</text>
+  <text x="650" y="55" fill="#8b949e" font-size="13">Investigator: Swaraj Bhattacharjee (2301730011)</text>
+
+  <!-- External Threat & Cloud Zone -->
+  <rect x="40" y="110" width="260" height="230" rx="10" fill="url(#cloudGrad)" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="55" y="135" fill="#60a5fa" font-size="14" font-weight="bold">EXTERNAL / WAN ZONE</text>
+  
+  <!-- Adversary C2 Node -->
+  <rect x="60" y="155" width="220" height="70" rx="6" fill="#1e1e1e" stroke="#ef4444" stroke-width="2"/>
+  <circle cx="85" cy="190" r="14" fill="#ef4444"/>
+  <text x="80" y="195" fill="#ffffff" font-size="12" font-weight="bold">X</text>
+  <text x="110" y="180" fill="#fca5a5" font-size="12" font-weight="bold">Adversary C2 Server</text>
+  <text x="110" y="198" fill="#9ca3af" font-size="10">IP: 185.220.101.45 (Tor Relay)</text>
+  <text x="110" y="212" fill="#ef4444" font-size="9">Domain: c2.omega-blacklock.onion</text>
+
+  <!-- Cloud EHR & PACS Backup -->
+  <rect x="60" y="245" width="220" height="75" rx="6" fill="#1e1e1e" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="75" y="270" fill="#38bdf8" font-size="12" font-weight="bold">AWS Cloud Health Gateway</text>
+  <text x="75" y="288" fill="#9ca3af" font-size="10">Region: ap-south-1 (Mumbai)</text>
+  <text x="75" y="304" fill="#22c55e" font-size="9">CloudWatch / S3 Audit Logs Intact</text>
+
+  <!-- Perimeter Firewall -->
+  <rect x="360" y="160" width="130" height="130" rx="10" fill="#1f2937" stroke="#f59e0b" stroke-width="2"/>
+  <text x="375" y="190" fill="#fbbf24" font-size="13" font-weight="bold">Perimeter FW</text>
+  <text x="375" y="210" fill="#d1d5db" font-size="10">FortiGate 200F</text>
+  <text x="375" y="230" fill="#9ca3af" font-size="9">EVD-OMEGA-004</text>
+  <text x="375" y="250" fill="#ef4444" font-size="9">Outbound C2 Blocked</text>
+  <text x="375" y="265" fill="#10b981" font-size="9">Syslog Stream Active</text>
+
+  <!-- Core Switch -->
+  <rect x="550" y="160" width="130" height="130" rx="10" fill="#1f2937" stroke="#10b981" stroke-width="2"/>
+  <text x="565" y="190" fill="#34d399" font-size="13" font-weight="bold">Core Switch</text>
+  <text x="565" y="210" fill="#d1d5db" font-size="10">Cisco Cat 9300</text>
+  <text x="565" y="230" fill="#9ca3af" font-size="9">EVD-OMEGA-005</text>
+  <text x="565" y="250" fill="#f87171" font-size="9">Port Gi1/0/14 Quarantined</text>
+  <text x="565" y="265" fill="#38bdf8" font-size="9">VLAN 999 (Blackhole)</text>
+
+  <!-- Physical Hospital Environment Box -->
+  <rect x="40" y="370" width="920" height="300" rx="12" fill="#111827" stroke="#4b5563" stroke-width="2"/>
+  <text x="60" y="395" fill="#e5e7eb" font-size="14" font-weight="bold">PHYSICAL CRIME SCENE: ST. JUDE MEDICAL CENTER (HOSPITAL INTRANET)</text>
+
+  <!-- Crime Scene Room 1: Emergency Ward / Nurse Station -->
+  <rect x="60" y="415" width="410" height="235" rx="8" fill="#18181b" stroke="#f43f5e" stroke-width="2"/>
+  <rect x="70" y="425" width="220" height="24" rx="4" fill="#881337"/>
+  <text x="75" y="442" fill="#fecdd3" font-size="11" font-weight="bold">PATIENT TRIAGE / NURSE DESK 04</text>
+
+  <!-- Nurse Workstation 04 -->
+  <rect x="80" y="465" width="180" height="85" rx="6" fill="#27272a" stroke="#f43f5e" stroke-width="2"/>
+  <text x="90" y="485" fill="#fda4af" font-size="12" font-weight="bold">WS-NURSE-04 (Infected)</text>
+  <text x="90" y="502" fill="#9ca3af" font-size="10">IP: 192.168.10.45</text>
+  <text x="90" y="518" fill="#fca5a5" font-size="9">HP EliteDesk [EVD-OMEGA-003]</text>
+  <text x="90" y="534" fill="#f43f5e" font-size="9">Status: Locked (.omega extension)</text>
+
+  <!-- Rogue USB Drive (Vector) -->
+  <rect x="290" y="465" width="160" height="85" rx="6" fill="url(#alertGrad)" stroke="#ef4444" stroke-width="2" filter="url(#glow)"/>
+  <text x="300" y="488" fill="#ffffff" font-size="12" font-weight="bold">PATIENT USB (VECTOR)</text>
+  <text x="300" y="505" fill="#fecaca" font-size="10">SanDisk 32GB Ultra</text>
+  <text x="300" y="522" fill="#fee2e2" font-size="9">Tag: EVD-OMEGA-002</text>
+  <text x="300" y="538" fill="#ffffff" font-size="9">Initial Access Point</text>
+
+  <text x="80" y="620" fill="#9ca3af" font-size="10">Physical Notes: Door open to hallway; badge card reader logged entry at 02:40 AM IST.</text>
+
+  <!-- Crime Scene Room 2: Server Room B204 -->
+  <rect x="510" y="415" width="430" height="235" rx="8" fill="#18181b" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="520" y="425" width="220" height="24" rx="4" fill="#1e3a8a"/>
+  <text x="525" y="442" fill="#bfdbfe" font-size="11" font-weight="bold">SERVER ROOM B204 (RESTRICTED)</text>
+
+  <!-- Primary EHR Server -->
+  <rect x="530" y="465" width="220" height="110" rx="6" fill="#27272a" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="545" y="490" fill="#ef4444" font-size="13" font-weight="bold">OMEGA-SRV-01 (EHR DB)</text>
+  <text x="545" y="510" fill="#d1d5db" font-size="10">Dell PowerEdge R750 [EVD-OMEGA-001]</text>
+  <text x="545" y="528" fill="#9ca3af" font-size="10">IP: 192.168.10.100 | Port 445 Compromised</text>
+  <text x="545" y="546" fill="#ef4444" font-size="9">Encrypted: 42,000 Patient Records</text>
+  <text x="545" y="562" fill="#fbbf24" font-size="9">Forensic Image Acquired (SHA-256 Verified)</text>
+
+  <!-- Evidence Locker / Write Blocker Workstation -->
+  <rect x="770" y="465" width="150" height="110" rx="6" fill="#27272a" stroke="#10b981" stroke-width="1.5"/>
+  <text x="780" y="490" fill="#34d399" font-size="11" font-weight="bold">Forensic Acquisition</text>
+  <text x="780" y="510" fill="#d1d5db" font-size="9">Tableau T8u Bridge</text>
+  <text x="780" y="528" fill="#9ca3af" font-size="9">FTK Imager / dc3dd</text>
+  <text x="780" y="546" fill="#10b981" font-size="9">Live RAM Dump Done</text>
+  <text x="780" y="562" fill="#38bdf8" font-size="9">Faraday Sealed</text>
+
+  <text x="530" y="620" fill="#9ca3af" font-size="10">Room Conditions: Temp: 19.4 C | Humidity: 38% | Badge Logs &amp; CCTV Captured.</text>
+
+  <!-- Attack Vector Connection Lines -->
+  <!-- 1. USB to Nurse Workstation -->
+  <line x1="290" y1="507" x2="260" y2="507" stroke="#ef4444" stroke-width="3" stroke-dasharray="4,2"/>
+  <text x="265" y="498" fill="#ef4444" font-size="8" font-weight="bold">EXEC</text>
+
+  <!-- 2. Nurse Workstation to Switch -->
+  <path d="M 170 465 L 170 330 L 590 330 L 590 290" fill="none" stroke="#f43f5e" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="320" y="325" fill="#f43f5e" font-size="9" font-weight="bold">Lateral Spread (PsExec / SMB 445)</text>
+
+  <!-- 3. Switch to Server Room -->
+  <path d="M 640 290 L 640 465" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="645" y="360" fill="#ef4444" font-size="9" font-weight="bold">Pivot Infection</text>
+
+  <!-- 4. Firewall to External C2 -->
+  <line x1="360" y1="200" x2="280" y2="200" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="295" y="193" fill="#ef4444" font-size="8">C2 Beacon</text>
+
+  <!-- 5. Switch to Firewall -->
+  <line x1="550" y1="225" x2="490" y2="225" stroke="#10b981" stroke-width="2"/>
+</svg>

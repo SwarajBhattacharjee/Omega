@@ -1,0 +1,11 @@
+# Microsoft-Windows-Sysmon/Operational Logs (Simulated)
+# Target: OMEGA-SRV-01 & WS-NURSE-04
+
+2026-11-17 02:43:08 IST | SysmonID: 1 (ProcessCreate) | Computer: WS-NURSE-04 | User: NT AUTHORITY\SYSTEM | Image: C:\ProgramData\omega_dropper.exe | Hashes: SHA256=bb123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef | ParentImage: C:\Windows\System32\powershell.exe
+2026-11-17 02:54:10 IST | SysmonID: 1 (ProcessCreate) | Computer: OMEGA-SRV-01 | User: NT AUTHORITY\SYSTEM | Image: C:\ProgramData\omega_payload.exe | Hashes: SHA256=a1b2c3d4e5f67890123456789abcdef0123456789abcdef0123456789abcdef0 | CommandLine: "C:\ProgramData\omega_payload.exe" --encrypt-all
+2026-11-17 02:54:35 IST | SysmonID: 13 (RegistryValueSet) | Computer: OMEGA-SRV-01 | TargetObject: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\OmegaHealthUpdate | Details: C:\ProgramData\omega_payload.exe
+2026-11-17 02:55:00 IST | SysmonID: 3 (NetworkConnect) | Computer: OMEGA-SRV-01 | Image: C:\ProgramData\omega_payload.exe | SourceIp: 192.168.10.100 | SourcePort: 49211 | DestinationIp: 185.220.101.45 | DestinationPort: 443 | Protocol: tcp
+2026-11-17 03:02:11 IST | SysmonID: 11 (FileCreate) | Computer: OMEGA-SRV-01 | TargetFilename: C:\EHR_DATABASE\PATIENT_RECORDS_2026.MDF.omega | Image: C:\ProgramData\omega_payload.exe
+2026-11-17 03:02:15 IST | SysmonID: 11 (FileCreate) | Computer: OMEGA-SRV-01 | TargetFilename: C:\EHR_DATABASE\README_RECOVERY_KEY.txt | Image: C:\ProgramData\omega_payload.exe
+2026-11-17 03:05:40 IST | SysmonID: 11 (FileCreate) | Computer: OMEGA-SRV-01 | TargetFilename: C:\PACS_SCANS\CHEST_CT_WARD4.DCM.omega | Image: C:\ProgramData\omega_payload.exe
+2026-11-17 03:15:00 IST | SysmonID: 1 (ProcessCreate) | Computer: OMEGA-SRV-01 | Image: C:\Windows\System32\notepad.exe | CommandLine: notepad.exe "C:\EHR_DATABASE\README_RECOVERY_KEY.txt"

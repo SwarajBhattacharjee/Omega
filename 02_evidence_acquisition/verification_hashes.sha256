@@ -1,0 +1,7 @@
+# Case Omega Forensic Evidence Integrity Manifest
+# Generated: 2026-11-17 10:17:10 IST
+# Certified By: Swaraj Bhattacharjee (Lead Investigator, Roll: 2301730011)
+# Verification Algorithm: FIPS 180-4 Secure Hash Standard (SHA-256)
+
+29f29a9471a107cd05623ac0333b68c43c71e5350cbd851f8be51529341f4400  raw_images/server_ehr_partition.raw
+444cf39fb88b1c3badde2790f88cf229b853c393dd5f60518ccab52080050282  raw_images/memory_dump_sample.raw

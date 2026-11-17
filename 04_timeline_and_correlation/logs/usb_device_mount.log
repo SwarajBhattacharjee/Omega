@@ -1,0 +1,8 @@
+# Microsoft-Windows-DriverFrameworks-UserMode/Operational & USBSTOR Logs
+# Host: WS-NURSE-04 (Emergency Desk 04)
+
+2026-11-17 02:42:10 IST | EventID: 2003 | Source: DriverFrameworks-UserMode | Computer: WS-NURSE-04 | Message: UMDF host process created for USB mass storage device.
+2026-11-17 02:42:11 IST | EventID: 10000 | Source: Microsoft-Windows-DeviceSetupManager | Computer: WS-NURSE-04 | DeviceInstanceId: USB\VID_0781&PID_5581\SDCZ48-449102-K9 | FriendlyName: SanDisk Ultra USB 3.0 Device
+2026-11-17 02:42:12 IST | EventID: 1006 | Source: Microsoft-Windows-Storage-ClassPnP | Computer: WS-NURSE-04 | Device: \Device\HarddiskVolume3 | DriveLetter: E: | VolumeName: PATIENT_TRANSFER_DATA | Serial: 449102-K9
+2026-11-17 02:42:14 IST | EventID: 4663 | Source: Microsoft-Windows-Security-Auditing | Computer: WS-NURSE-04 | User: nurse_on_duty | ObjectName: E:\PATIENT_TRANSFER_REPORT.docx.lnk | AccessMask: 0x1 (ReadData)
+2026-11-17 03:40:00 IST | EventID: 2100 | Source: DriverFrameworks-UserMode | Computer: WS-NURSE-04 | Message: Physical device E: marked for forensic seizure by First Responder Swaraj Bhattacharjee.
